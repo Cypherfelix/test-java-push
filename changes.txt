@@ -1,0 +1,11 @@
+The changes i made are as follows
+ 1) DBTables.java
+    I changed the sql for creating tickets table so that its column includes
+    a amount and denied column.
+
+ 2) Tickets Class in model package
+    I added the amount field and added changed the arguments accordingly and methods
+
+ 3) In TicketsRepo Class
+    I made changes in the insert sql statement and select statements to include the amount
+    field and denied

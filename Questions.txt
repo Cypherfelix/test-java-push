@@ -1,0 +1,52 @@
+1. Describe a point in the project where you ran into a
+major problem or challenge
+
+How to separate user into a manager and an employee the solution is that i included a
+new field to the user table that is called is_manager storing a true or false value
+Then i created two controllers one for the employee and one for the manager
+
+2. What was your overall planning process
+
+The first step I took is designing the models that is the ticket model then
+redefine the user model. After model creation using
+the variables i created the queries to create the tables for the specific models
+Finally i worked on the handlers then implemented the repositories and services
+
+
+3. Were there any points where you had to abandon functionality or ideas
+
+Yes some of the ideas i had to abandons is implementing security of the request that is using a specific
+key given when one logs in is only when you can access the other functionality
+
+4. If given one week what would you do
+Implement authentication tokens  providing tokens to access specific functionality
+
+5. What lessons did you learn
+    - Having a plan is important to ease on the implementation
+    - structuring your project helps in having quality code
+    -
+
+6. Paste an example of code from project which you are most proud of
+
+
+        List<Tickets> tickets = getAll();
+
+        ArrayList<Tickets> myTickets = new ArrayList<Tickets>();
+
+        for(Tickets t : tickets) {
+            if (!t.isApproved() && !t.isDenied()){
+                myTickets.add(t);
+            }
+        }
+
+        return myTickets;
+
+7 What specifically are you proud of
+
+To prevent duplication of code and enable reuse instead of performing a new query on
+tickets table one can just use the method of retreiving all tickets then filtering
+
+8. Specie place in code i Would chang
+
+The driver class the place of accessing functionality a handler should be added to
+authenticate the user
